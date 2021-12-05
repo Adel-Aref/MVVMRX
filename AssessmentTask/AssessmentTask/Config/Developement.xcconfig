@@ -1,0 +1,16 @@
+//
+//  Developement.xcconfig
+//  AssessmentTask
+//
+//  Created by Adel Aref on 15/08/2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-AssessmentTask/Pods-AssessmentTask.development.xcconfig"
+// Server URL we will update this values as received from backend team
+Base_URL = https:/$()/picsum.photos/v2
+
+// App Settings
+APP_NAME = FawryTask (dev)
+APP_BUNDLE_ID = com.EgyPTo.FawryTask.AssessmentTask

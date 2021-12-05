@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qS9-ws-d5D">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="n4j-H1-URH">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="qS9-ws-d5D" customClass="HomeViewController" customModule="AssessmentTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jwy-px-aTd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgu-Ys-faG">
+                                <rect key="frame" x="30" y="44" width="71.5" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" name="secondaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAC-B0-F1B">
+                                <rect key="frame" x="307" y="38.5" width="87" height="35.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log out">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logout" destination="qS9-ws-d5D" eventType="touchUpInside" id="SDd-fE-aOL"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CAL-WQ-PAE">
+                                <rect key="frame" x="20" y="88" width="374" height="754"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WEr-hh-ad3">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UZT-xX-ZDM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UZT-xX-ZDM" firstAttribute="trailing" secondItem="gAC-B0-F1B" secondAttribute="trailing" constant="20" id="Atv-3B-616"/>
+                            <constraint firstItem="Hgu-Ys-faG" firstAttribute="top" secondItem="UZT-xX-ZDM" secondAttribute="top" id="GH9-8Z-HVc"/>
+                            <constraint firstItem="UZT-xX-ZDM" firstAttribute="trailing" secondItem="CAL-WQ-PAE" secondAttribute="trailing" constant="20" id="Qjw-8s-Y2T"/>
+                            <constraint firstItem="CAL-WQ-PAE" firstAttribute="leading" secondItem="UZT-xX-ZDM" secondAttribute="leading" constant="20" id="TJI-gp-N3N"/>
+                            <constraint firstItem="CAL-WQ-PAE" firstAttribute="top" secondItem="Hgu-Ys-faG" secondAttribute="bottom" constant="20" id="YJe-hb-FUT"/>
+                            <constraint firstItem="gAC-B0-F1B" firstAttribute="centerY" secondItem="Hgu-Ys-faG" secondAttribute="centerY" id="eWf-fz-5Pj"/>
+                            <constraint firstItem="Hgu-Ys-faG" firstAttribute="leading" secondItem="UZT-xX-ZDM" secondAttribute="leading" constant="30" id="kZw-Xm-FQY"/>
+                            <constraint firstItem="UZT-xX-ZDM" firstAttribute="bottom" secondItem="CAL-WQ-PAE" secondAttribute="bottom" constant="20" id="vBt-tX-hxR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authersCollectionView" destination="CAL-WQ-PAE" id="15k-ID-z2h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QcM-sd-rEt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="12"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="secondaryColor">
+            <color red="0.063000001013278961" green="0.3919999897480011" blue="0.54900002479553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

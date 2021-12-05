@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionCell" id="gTV-IL-0wX" customClass="HomeCollectionCell" customModule="AssessmentTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="194" height="305"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="194" height="305"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yer-hh-ci2">
+                        <rect key="frame" x="0.0" y="0.0" width="194" height="305"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fawryPlacholder" translatesAutoresizingMaskIntoConstraints="NO" id="f4v-pf-rgg">
+                                <rect key="frame" x="0.0" y="0.0" width="194" height="246"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zRX-Fs-sry">
+                                <rect key="frame" x="0.0" y="258" width="194" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="FbS-rT-Cyv">
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="35"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="s18-3D-cf7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f4v-pf-rgg" firstAttribute="leading" secondItem="yer-hh-ci2" secondAttribute="leading" id="JVO-9M-rq1"/>
+                            <constraint firstItem="zRX-Fs-sry" firstAttribute="leading" secondItem="yer-hh-ci2" secondAttribute="leading" id="M5I-Yf-MBY"/>
+                            <constraint firstItem="zRX-Fs-sry" firstAttribute="top" secondItem="f4v-pf-rgg" secondAttribute="bottom" constant="12" id="fbm-T7-r2p"/>
+                            <constraint firstAttribute="bottom" secondItem="zRX-Fs-sry" secondAttribute="bottom" constant="12" id="jgK-ut-vEA"/>
+                            <constraint firstAttribute="trailing" secondItem="f4v-pf-rgg" secondAttribute="trailing" id="rmF-Ap-TU2"/>
+                            <constraint firstItem="f4v-pf-rgg" firstAttribute="top" secondItem="yer-hh-ci2" secondAttribute="top" id="tRl-4E-eIY"/>
+                            <constraint firstAttribute="trailing" secondItem="zRX-Fs-sry" secondAttribute="trailing" id="xVt-X6-3Gt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="yer-hh-ci2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2Bu-AK-JOQ"/>
+                <constraint firstAttribute="trailing" secondItem="yer-hh-ci2" secondAttribute="trailing" id="61r-Ue-339"/>
+                <constraint firstItem="yer-hh-ci2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AgI-ob-tKw"/>
+                <constraint firstAttribute="bottom" secondItem="yer-hh-ci2" secondAttribute="bottom" id="K9C-QG-ois"/>
+            </constraints>
+            <size key="customSize" width="194" height="305"/>
+            <connections>
+                <outlet property="autherImageView" destination="f4v-pf-rgg" id="1FK-Db-5kB"/>
+                <outlet property="autherTitleLabel" destination="FbS-rT-Cyv" id="y90-Rh-g5q"/>
+            </connections>
+            <point key="canvasLocation" x="-135" y="7"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="fawryPlacholder" width="224" height="224"/>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
